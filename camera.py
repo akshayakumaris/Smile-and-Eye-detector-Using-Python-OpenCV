@@ -18,10 +18,10 @@ class smilecamera(object):
     def get_frame(self):
         image=self.stream.read()
         
-        face_detector=cv2.CascadeClassifier('\haarcascade_frontalface_default.xml')
+        face_detector=cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
     
         #smile detector
-        smile_detector=cv2.CascadeClassifier('\haarcascade_smile.xml')
+        smile_detector=cv2.CascadeClassifier('haarcascade_smile.xml')
         
         frame_grayscale=cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
 
@@ -70,10 +70,10 @@ class eyecamera(object):
     def get_frame(self):
         image=self.stream.read()
         
-        face_detector=cv2.CascadeClassifier('\haarcascade_frontalface_default.xml')
+        face_detector=cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
     
         #eye detector
-        eye_detector=cv2.CascadeClassifier('\haarcascade_eye.xml')
+        eye_detector=cv2.CascadeClassifier('haarcascade_eye.xml')
         
         frame_grayscale=cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
 
